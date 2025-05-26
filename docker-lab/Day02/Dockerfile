@@ -1,8 +1,10 @@
-FROM debian:11
-LABEL maintainer="sanderhus15@outlook.com"
-RUN apt-get update && apt-get install nginx curl -y
-EXPOSE 80 
-ENV APP_VERSION 1.0.1
-ENTRYPOINT ["nginx"]
-CMD ["-g", "daemon off;"]
-HEALTHCHECK --timeout=2s CMD curl -f localhost || exit 1
+FROM golang:1.18 as buildando 
+WORKDIR /app
+COPY . ./
+RUN go mod init hello
+RUN go build -o /app/hello
+
+FROM alpine:3.15.9
+COPY --from=buildando /app/hello /app/hello
+CMD ["/app/hello"]
+
