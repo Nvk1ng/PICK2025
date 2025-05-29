@@ -6,5 +6,8 @@ RUN go build -o /app/hello
 
 FROM alpine:3.15.9
 COPY --from=buildando /app/hello /app/hello
+ENV APP="Hello_World"
+ARG GIROPOPS="strigus"
+RUN echo "O giropops é: $GIROPOPS"
 CMD ["/app/hello"]
 
