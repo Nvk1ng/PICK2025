@@ -1,0 +1,21 @@
+FROM -> Especifica a imagem base para construir um novo container.
+RUN -> Executa comandos em uma nova camada e cria uma nova imagem.
+CMD -> Define o comando padrão e parâmetros que serão executados no container.
+ENTRYPOINT -> Configura o comando para ser executado como um executável.
+EXPOSE -> Informa ao Docker que o container irá escutar em portas específicas em tempo de execução.
+ENV -> Define uma variável de ambiente persistente para ser usada no container.
+ADD -> Copia os arquivos e diretórios para o sistema de arquivos do container e pode descompactar arquivos locais.
+COPY -> Copia os arquivos ou diretórios locais para o sistema de arquivos do container.
+WORKDIR -> Define o diretório de trabalho para instruções RUN, CMD, ENTRYPOINT, COPY e ADD.
+VOLUME -> Cria um ponto de montagem de volume no container.
+LABEL -> Adiciona metadados à imagem, como autor, versão, ou descrição.
+AR G-> Define uma variável para ser usada durante a fase de construção da imagem.
+USER -> Define o nome de úsuario ou UID para executar as instruções subsequentes.
+STOPSIGNAL -> Define o sinal do sistema para encerrar o container.
+HEALTHCHECK -> Verifica a saúde do container usando um comando específico.
+ONBUILD -> Adiciona uma instrução que será executada quando a imagem for usada como base para outra.
+SHELL -> Substitui o shell padrão usado para instruções RUN, CMD, e ENTRYPOINT.
+MAINTAINER -> (Depreciado) Nome ou e-mail do autor da image.
+DEPRECATED -> Indica que uma instrução ou recurso é obsoleto e pode ser removido em versões futuras.
+MULTISTAGE -> Técnica para uar múltiplos estágios de construção e otimizar imagens.
+
