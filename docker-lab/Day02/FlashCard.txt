@@ -9,7 +9,7 @@ COPY -> Copia os arquivos ou diretórios locais para o sistema de arquivos do co
 WORKDIR -> Define o diretório de trabalho para instruções RUN, CMD, ENTRYPOINT, COPY e ADD.
 VOLUME -> Cria um ponto de montagem de volume no container.
 LABEL -> Adiciona metadados à imagem, como autor, versão, ou descrição.
-AR G-> Define uma variável para ser usada durante a fase de construção da imagem.
+ARG-> Define uma variável para ser usada durante a fase de construção da imagem.
 USER -> Define o nome de úsuario ou UID para executar as instruções subsequentes.
 STOPSIGNAL -> Define o sinal do sistema para encerrar o container.
 HEALTHCHECK -> Verifica a saúde do container usando um comando específico.
